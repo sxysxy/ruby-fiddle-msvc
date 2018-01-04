@@ -1,0 +1,370 @@
+"pkg-config --exists libffi"
+package configuration for libffi is not found
+have_header: checking for ffi.h... -------------------- yes
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c   x64-vcruntime140-ruby250-static.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: int main(int argc, char **argv)
+13: {
+14:   return 0;
+15: }
+/* end */
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <ffi.h>
+/* end */
+
+--------------------
+
+have_library: checking for ffi.lib... -------------------- no
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c   x64-vcruntime140-ruby250-static.lib ffi.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+LINK : fatal error LNK1181: 无法打开输入文件“ffi.lib”
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: 
+13: /*top*/
+14: extern int t(void);
+15: int main(int argc, char **argv)
+16: {
+17:   if (argc > 1000000) {
+18:     printf("%p", &t);
+19:   }
+20: 
+21:   return 0;
+22: }
+23: 
+24: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for libffi.lib... -------------------- yes
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c   x64-vcruntime140-ruby250-static.lib libffi.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: 
+13: /*top*/
+14: extern int t(void);
+15: int main(int argc, char **argv)
+16: {
+17:   if (argc > 1000000) {
+18:     printf("%p", &t);
+19:   }
+20: 
+21:   return 0;
+22: }
+23: 
+24: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for sys/mman.h... -------------------- no
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+conftest.c(12): fatal error C1083: 无法打开包括文件: “sys/mman.h”: No such file or directory
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <sys/mman.h>
+/* end */
+
+--------------------
+
+have_header: checking for dlfcn.h... -------------------- no
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+conftest.c(12): fatal error C1083: 无法打开包括文件: “dlfcn.h”: No such file or directory
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <dlfcn.h>
+/* end */
+
+--------------------
+
+have_header: checking for windows.h... -------------------- yes
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <windows.h>
+/* end */
+
+--------------------
+
+have_func: checking for LoadLibrary()... -------------------- yes
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c  libffi.lib  x64-vcruntime140-ruby250-static.lib libffi.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: 
+13: /*top*/
+14: extern int t(void);
+15: int main(int argc, char **argv)
+16: {
+17:   if (argc > 1000000) {
+18:     printf("%p", &t);
+19:   }
+20: 
+21:   return 0;
+22: }
+23: int t(void) { void ((*volatile p)()); p = (void ((*)()))LoadLibrary; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for FreeLibrary()... -------------------- yes
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c  libffi.lib  x64-vcruntime140-ruby250-static.lib libffi.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: 
+13: /*top*/
+14: extern int t(void);
+15: int main(int argc, char **argv)
+16: {
+17:   if (argc > 1000000) {
+18:     printf("%p", &t);
+19:   }
+20: 
+21:   return 0;
+22: }
+23: int t(void) { void ((*volatile p)()); p = (void ((*)()))FreeLibrary; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for GetProcAddress()... -------------------- yes
+
+"cl -nologo -Feconftest -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle -I../.././include  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600 conftest.c  libffi.lib  x64-vcruntime140-ruby250-static.lib libffi.lib  user32.lib advapi32.lib shell32.lib ws2_32.lib iphlpapi.lib imagehlp.lib shlwapi.lib   -link -incremental:no -debug -opt:ref -opt:icf   -libpath:. -libpath:../.. "
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: 
+13: /*top*/
+14: extern int t(void);
+15: int main(int argc, char **argv)
+16: {
+17:   if (argc > 1000000) {
+18:     printf("%p", &t);
+19:   }
+20: 
+21:   return 0;
+22: }
+23: int t(void) { void ((*volatile p)()); p = (void ((*)()))GetProcAddress; return !p; }
+/* end */
+
+--------------------
+
+have_const: checking for FFI_STDCALL in ffi.h... -------------------- yes
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <ffi.h>
+13: 
+14: /*top*/
+15: typedef int conftest_type;
+16: conftest_type conftestval = (int)FFI_STDCALL;
+/* end */
+
+--------------------
+
+check_signedness: checking signedness of size_t... -------------------- unsigned
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+conftest.c(16): error C2118: 负下标
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <stddef.h>
+13: typedef size_t rbcv_typedef_;
+14: 
+15: /*top*/
+16: int conftest_const[((rbcv_typedef_)-1 < 0) ? 1 : -1];
+/* end */
+
+"cl -nologo -I../../.ext/include/x64-mswin64_140 -I../.././include -I../.././ext/fiddle  -D_WIN32_WINNT=0x0600   -MD -Zi -W2 -wd4100 -wd4127 -wd4210 -wd4214 -wd4255 -wd4574  -wd4668 -wd4710 -wd4711 -wd4820 -wd4996  -we4028 -we4142 -O2sy-  -Zm600   -c conftest.c"
+conftest.c
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #ifndef WIN32_LEAN_AND_MEAN
+ 4: #define WIN32_LEAN_AND_MEAN
+ 5: #endif /* WIN32_LEAN_AND_MEAN */
+ 6: #ifndef WIN32
+ 7: #define WIN32
+ 8: #endif /* WIN32 */
+ 9: #include <winsock2.h>
+10: #include <ws2tcpip.h>
+11: #include <windows.h>
+12: #include <stddef.h>
+13: typedef size_t rbcv_typedef_;
+14: 
+15: /*top*/
+16: int conftest_const[((rbcv_typedef_)-1 > 0) ? 1 : -1];
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+ 1: #ifndef EXTCONF_H
+ 2: #define EXTCONF_H
+ 3: #define HAVE_FFI_H 1
+ 4: #define HAVE_WINDOWS_H 1
+ 5: #define HAVE_LOADLIBRARY 1
+ 6: #define HAVE_FREELIBRARY 1
+ 7: #define HAVE_GETPROCADDRESS 1
+ 8: #define HAVE_CONST_FFI_STDCALL 1
+ 9: #define SIGNEDNESS_OF_SIZE_T +1
+10: #endif
+/* end */
+
