@@ -1,6 +1,6 @@
 #ifndef INCLUDE_RUBY_CONFIG_H
 #define INCLUDE_RUBY_CONFIG_H 1
-#if _MSC_VER != 1912
+#if _MSC_VER < 1912
 #error MSC version unmatch: _MSC_VER: 1912 is expected.
 #endif
 #define RUBY_MSVCRT_VERSION 140

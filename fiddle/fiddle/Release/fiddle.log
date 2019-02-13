@@ -1,0 +1,7 @@
+﻿  closure.c
+  conversions.c
+  fiddle.c
+  function.c
+  handle.c
+  pointer.c
+  fiddle.vcxproj -> D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\fiddle.so

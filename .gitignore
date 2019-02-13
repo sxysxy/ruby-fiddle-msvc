@@ -1,0 +1,8 @@
+*.obj
+*.def
+*.exp
+*.pdb
+.vs
+*.tlog
+*.zip
+

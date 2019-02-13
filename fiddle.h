@@ -139,9 +139,12 @@ VALUE rb_fiddle_new_function(VALUE address, VALUE arg_types, VALUE ret_type);
 
 #ifdef _WIN64
 
+#pragma comment(lib, "libffi_x64.lib")
+#pragma comment(lib, "x64-vcruntime140-ruby260.lib")
+
 #else
 
 #pragma comment(lib, "libffi_x86.lib")
-#pragma comment(lib, "vcruntime140-ruby250.lib")
+#pragma comment(lib, "vcruntime140-ruby260.lib")
 
 #endif
