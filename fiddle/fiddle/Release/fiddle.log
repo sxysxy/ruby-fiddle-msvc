@@ -1,0 +1,18 @@
+﻿  closure.c
+  conversions.c
+  fiddle.c
+  function.c
+  handle.c
+  pointer.c
+  正在生成代码...
+  libffi_x86.lib(raw_api.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+    正在创建库 D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\fiddle.lib 和对象 D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\fiddle.exp
+  正在生成代码
+  已完成代码的生成
+libffi_x86.lib(closures.obj) : warning LNK4049: 已导入本地定义的符号 _abort
+libffi_x86.lib(raw_api.obj) : warning LNK4099: 未找到 PDB“libffi.pdb”(使用“libffi_x86.lib(raw_api.obj)”或在“D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\libffi.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libffi_x86.lib(closures.obj) : warning LNK4099: 未找到 PDB“libffi.pdb”(使用“libffi_x86.lib(closures.obj)”或在“D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\libffi.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libffi_x86.lib(ffi.obj) : warning LNK4099: 未找到 PDB“libffi.pdb”(使用“libffi_x86.lib(ffi.obj)”或在“D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\libffi.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libffi_x86.lib(prep_cif.obj) : warning LNK4099: 未找到 PDB“libffi.pdb”(使用“libffi_x86.lib(prep_cif.obj)”或在“D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\libffi.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libffi_x86.lib(types.obj) : warning LNK4099: 未找到 PDB“libffi.pdb”(使用“libffi_x86.lib(types.obj)”或在“D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\libffi.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  fiddle.vcxproj -> D:\taolu\projects\ruby-fiddle-msvc-\fiddle\Release\fiddle.so

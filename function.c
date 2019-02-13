@@ -137,6 +137,10 @@ initialize(int argc, VALUE argv[], VALUE self)
     }
     arg_types[len] = NULL;
 
+#ifdef _WIN64
+    nabi = FFI_DEFAULT_ABI;
+#endif
+
     result = ffi_prep_cif(cif, nabi, len, rtype, arg_types);
 
     if (result)

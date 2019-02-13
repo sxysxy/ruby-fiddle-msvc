@@ -42,6 +42,10 @@
 #include <ffi.h>
 #endif
 
+#ifdef _WIN64
+#define FFI_NO_RAW_API 1 
+#endif
+
 #undef ffi_type_uchar
 #undef ffi_type_schar
 #undef ffi_type_ushort

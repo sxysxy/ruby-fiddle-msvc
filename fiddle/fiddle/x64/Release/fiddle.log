@@ -1,0 +1,13 @@
+﻿  closure.c
+  conversions.c
+  fiddle.c
+  function.c
+  handle.c
+  pointer.c
+d:\taolu\projects\ruby-fiddle-msvc-\pointer.c(554): warning C4267: “函数”: 从“size_t”转换到“long”，可能丢失数据
+  正在生成代码...
+  libffi_x64.lib(closures.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+    正在创建库 D:\taolu\projects\ruby-fiddle-msvc-\fiddle\x64\Release\fiddle.lib 和对象 D:\taolu\projects\ruby-fiddle-msvc-\fiddle\x64\Release\fiddle.exp
+  正在生成代码
+  已完成代码的生成
+  fiddle.vcxproj -> D:\taolu\projects\ruby-fiddle-msvc-\fiddle\x64\Release\fiddle.so
