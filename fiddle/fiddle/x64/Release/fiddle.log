@@ -1,8 +1,0 @@
-﻿  closure.c
-  conversions.c
-  fiddle.c
-  function.c
-  handle.c
-  pointer.c
-d:\taolu\projects\ruby-fiddle-msvc-\pointer.c(554): warning C4267: “函数”: 从“size_t”转换到“long”，可能丢失数据
-  fiddle.vcxproj -> D:\taolu\projects\ruby-fiddle-msvc-\fiddle\x64\Release\fiddle.lib
